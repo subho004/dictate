@@ -1,0 +1,39 @@
+[package]
+name = "dictate"
+version = "0.1.0"
+description = "Voice dictation with AssemblyAI + Gemini"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "dictate_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri-plugin-global-shortcut = "2.3.2"
+cpal = "0.18.2"
+rubato = "0.15"
+tokio = { version = "1.53.1", features = ["full"] }
+tokio-tungstenite = { version = "0.30.0", features = ["native-tls"] }
+futures-util = "0.3.34"
+enigo = "0.6.1"
+arboard = "3.6.1"
+dotenvy = "0.15.7"
+anyhow = "1.0.104"
+reqwest = { version = "0.13.4", default-features = false, features = ["json", "rustls"] }
+
+[dev-dependencies]
+hound = "3.5.1"
+

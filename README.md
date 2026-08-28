@@ -18,6 +18,10 @@ Press a global hotkey, speak, and your words are transcribed and pasted at the c
 
 ---
 
+
+https://github.com/user-attachments/assets/3b5a7a7f-5417-46cb-94d3-a2c6fe2e218f
+
+
 ## Contents
 
 - [How it works](#how-it-works)

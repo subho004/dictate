@@ -18,12 +18,13 @@ Press a global hotkey, speak, and your words are transcribed and pasted at the c
 
 ---
 
+## Video Demo
 
 https://github.com/user-attachments/assets/3b5a7a7f-5417-46cb-94d3-a2c6fe2e218f
 
-
 ## Contents
 
+- [Video Demo](#video-demo)
 - [How it works](#how-it-works)
 - [Features](#features)
 - [Tech stack](#tech-stack)

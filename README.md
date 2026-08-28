@@ -12,7 +12,7 @@ Press a global hotkey, speak, and your words are transcribed and pasted at the c
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey)](#getting-started)
 [![AssemblyAI](https://img.shields.io/badge/STT-AssemblyAI-1E1E2E)](https://www.assemblyai.com)
 [![Gemini](https://img.shields.io/badge/LLM-Gemini%203.7%20Flash-4285F4?logo=googlegemini&logoColor=white)](https://ai.google.dev)
-[![Status](https://img.shields.io/badge/status-work%20in%20progress-yellow)](#roadmap)
+[![Status](https://img.shields.io/badge/status-done-brightgreen)](#additional-features)
 
 </div>
 
@@ -33,7 +33,7 @@ Press a global hotkey, speak, and your words are transcribed and pasted at the c
 - [Building for production](#building-for-production)
 - [Project structure](#project-structure)
 - [Documentation](#documentation)
-- [Roadmap](#roadmap)
+- [Additional features](#additional-features)
 - [License](#license)
 
 ## How it works
@@ -162,7 +162,7 @@ On Windows, generate an equivalent 16kHz mono 16-bit PCM WAV file by any means (
 npm run tauri build
 ```
 
-Produces a native installer/bundle for the platform you run it on (`.app`/`.dmg` on macOS, `.msi`/`.exe` on Windows). Code signing and notarization are not yet configured — see [Roadmap](#roadmap).
+Produces a native installer/bundle for the platform you run it on (`.app`/`.dmg` on macOS, `.msi`/`.exe` on Windows). Code signing and notarization are not yet configured — see [Additional features](#additional-features).
 
 ## Project structure
 
@@ -192,13 +192,15 @@ dictate/
 - [`docs/implementation-plan.md`](docs/implementation-plan.md) — full architecture, tech stack rationale, external API details, milestones.
 - [`docs/intent-state-management.md`](docs/intent-state-management.md) — why command detection is selection-driven rather than language-guessed.
 
-## Roadmap
+## Additional features
 
-- [ ] Customizable hotkey (currently a fixed default)
-- [ ] Floating listening indicator with live partial-transcript preview
-- [ ] macOS code signing + notarization, Windows code signing
-- [ ] Auto-update channel
-- [ ] Custom vocabulary / domain terms (`keyterms_prompt`)
+The core app — system-wide dictation and select-to-edit — is complete and working. These are optional enhancements on top of it, not blockers:
+
+- Customizable hotkey (currently a fixed default)
+- Floating listening indicator with live partial-transcript preview
+- macOS code signing + notarization, Windows code signing
+- Auto-update channel
+- Custom vocabulary / domain terms (`keyterms_prompt`)
 
 ## License
 
